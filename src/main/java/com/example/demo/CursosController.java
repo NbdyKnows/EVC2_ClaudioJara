@@ -33,10 +33,10 @@ public class CursosController {
         return userRepository.findAll();
     }
 
-    @PostMapping(path="/curso/nuevo",consumes = "application/x-www-form-urlencoded" )
-    public @ResponseBody String nuevo (@RequestParam String name, @RequestParam int creditos) {
+    @PostMapping(path="/curso/nuevo")
+    public @ResponseBody String nuevo (@RequestParam String nombre, @RequestParam Integer creditos) {
     Cursos n = new Cursos();
-    n.setNombre(name);
+    n.setNombre(nombre);
     n.setCreditos(creditos);
     userRepository.save(n);
     return "Saved";
