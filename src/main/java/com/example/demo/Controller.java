@@ -21,7 +21,7 @@ public class Controller{
 
     @GetMapping(path="/idat/nombre-completo")
     public String nombrecompleto(){
-        return "Claudio Arturo Jara Almonacid Jara";
+        return "Claudio Arturo Jara Almonacid";
     }
 
 }   

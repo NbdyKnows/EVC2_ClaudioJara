@@ -1,4 +1,4 @@
-@subdominio = sub-dominio-render
+@subdominio = render-evc2-jaraclaudio
 
 ##############################
 # Requests SIN base de datos #

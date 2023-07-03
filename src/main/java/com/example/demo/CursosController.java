@@ -29,12 +29,12 @@ public class CursosController {
     private JdbcTemplate jdbcTemplate;
 
     @GetMapping(path="/listar") //GET http://localhost:8080/demo/add
-    public @ResponseBody Iterable<Cursos> getAllSubjects() {
+    public @ResponseBody Iterable<Cursos> listar() {
         return userRepository.findAll();
     }
 
     @PostMapping(path="/nuevo") //POST http://localhost:8080/demo/add
-    public @ResponseBody String addNewUser (@RequestParam String name, @RequestParam int creditos) {
+    public @ResponseBody String nuevo (@RequestParam String name, @RequestParam int creditos) {
     Cursos n = new Cursos();
     n.setNombre(name);
     n.setCreditos(creditos);
@@ -43,7 +43,7 @@ public class CursosController {
     }
 
     @DeleteMapping(path = "/eliminar ")
-    public @ResponseBody String deleteUser(@RequestParam Integer id){
+    public @ResponseBody String eliminar(@RequestParam Integer id){
         Cursos user = userRepository.findById(id).orElse(null);
         if(user != null){
             userRepository.delete(user);
