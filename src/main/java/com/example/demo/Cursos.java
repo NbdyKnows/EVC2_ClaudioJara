@@ -12,8 +12,9 @@ public class Cursos {
     @Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-    private String nombre;
 
+    private String nombre;
+    
 	private int creditos;
 
     public Integer getId() {
